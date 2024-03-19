@@ -21,9 +21,11 @@ async def measure_time(n: int, max_delay: int) -> float:
     startTime = time.time()
     resuilts = await wait_n(n, max_delay)
     endTime = time.time
-    totalTime = endTime - startTime
-    averageTime = totalTime / n
+    total_time = endTime - startTime
+    averageTime = total_time / n
     return  averageTime
 
 if __name__ == "__main__":
     import sys
+    asyncio.run(measure_time(int(sys.argv[1]), int(sys.argv[2])))
+
