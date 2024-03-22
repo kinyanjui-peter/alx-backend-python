@@ -5,12 +5,12 @@ in parallel using asyncio.gather.
 """
 import asyncio
 import random
-import datetime import timedelta
+import time
 from typing import Generator
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
-async def measure_runtime() -> timedelta:
+async def measure_runtime() -> Generator[float, None, None]:
     """  A ffunction taht return async comprehension and time"""
     startTime = time.time()
     allTask = await asyncio.gather(async_comprehension(),
