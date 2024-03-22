@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import asyncio
 import random
-# from list import generator
+from typing import Generator
 
 
-async def async_generator():  # -> float #generator[float, None, None]:
+async def async_generator()  -> generator[float, None, None]:
     """
     coroutine called async_generator that takes no arguments.
 
