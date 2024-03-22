@@ -4,7 +4,7 @@ import random
 # from list import generator
 
 
-async def async_generator() #-> float #generator[float, None, None]:
+async def async_generator(): #-> float #generator[float, None, None]:
     # """
     # coroutine called async_generator that takes no arguments.
 
@@ -15,7 +15,7 @@ async def async_generator() #-> float #generator[float, None, None]:
     # Yields:
     #     float: A random float between 0 and 10
     #  """
-    for i in range(10):
+    for _ in range(10):
         # each loop wait for 1 sec
         await asyncio.sleep(1)
         randomNumber = random.uniform(0, 10)
