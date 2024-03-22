@@ -4,7 +4,7 @@ import random
 from typing import Generator
 
 
-async def async_generator()  -> generator[float, None, None]:
+async def async_generator()  -> Generator[float, None, None]:
     """
     coroutine called async_generator that takes no arguments.
 
