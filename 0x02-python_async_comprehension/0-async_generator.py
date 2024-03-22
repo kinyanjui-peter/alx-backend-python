@@ -12,7 +12,7 @@ Use the random module.
 """
 
 
-async def async_generator():
+async def async_generator() -> float:
     # loop 10 times
     for i in range(10):
         # each loop wait for 1 sec
