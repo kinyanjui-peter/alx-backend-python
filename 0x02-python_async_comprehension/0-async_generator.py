@@ -2,7 +2,9 @@
 import asyncio
 import random
 
-"""
+
+async def async_generator() -> generator[float, None, None]:
+    """
 coroutine called async_generator that takes no arguments.
 
 The coroutine will loop 10 times, each time asynchronously
@@ -13,13 +15,6 @@ Yields:
     float: A random float between 0 and 10
 
 """
-
-
-async def async_generator() -> float:
-    """
-    A function that loop 10 times which generating a
-    random number between 1-10
-    """
     for i in range(10):
         # each loop wait for 1 sec
         await asyncio.sleep(1)
