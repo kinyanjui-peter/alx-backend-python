@@ -3,6 +3,7 @@ import asyncio
 import random
 from list import generator
 
+
 async def async_generator() -> generator[float, None, None]:
     """
     coroutine called async_generator that takes no arguments.
