@@ -5,7 +5,7 @@ from random import uniform
 
 async def wait_random(max_delay: int = 10) -> float:
     """
-    Async routine that waits for a random delay between 0 and max_delay
+    Async routine that waits for a random d  n  elay between 0 and max_delay
     (default 10) seconds, then returns it.
     """
     delay = uniform(0, max_delay)
