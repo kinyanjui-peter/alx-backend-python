@@ -13,19 +13,15 @@ Return:
     float: averageTime
 """
 import asyncio
-wait_n = __import__ ('1-concurrent_coroutines').wait_n
 import time
+wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
-async def measure_time(n: int, max_delay: int) -> float:
-    startTime = time.time()
-    resuilts = await wait_n(n, max_delay)
-    endTime = time.time
-    total_time = endTime - startTime
-    averageTime = total_time / n
-    return  averageTime
+def measure_time(n: int, max_delay: int) -> float:
+    """Returns total execution time"""
+    start_time = time.time()
+    asyncio.run(wait_n(n, max_delay))
+    end_time = time.time()
 
-if __name__ == "__main__":
-    import sys
-    asyncio.run(measure_time(int(sys.argv[1]), int(sys.argv[2])))
-
+    total_time = end_time - start_time
+    return (total_time/n)
