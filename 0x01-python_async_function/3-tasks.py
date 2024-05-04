@@ -1,9 +1,6 @@
 #!/usr/bin/env python 3
 """Asyncio function"""
 import asyncio
-from random import uniform
-
-
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
