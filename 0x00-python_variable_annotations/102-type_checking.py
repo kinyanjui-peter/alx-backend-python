@@ -6,26 +6,17 @@ and apply any necessary changes.
 from typing import Tuple, List, Any
 
 
-def zoom_array(lst: Tuple[Any], factor: int = 2) -> List[Any]:
-    """Zooms into the given tuple by repeating each item by a factor.
-
-    Args:
-        lst (Tuple[Any]): The tuple to be zoomed into.
-        factor (int, optional): The zoom factor (repeats each item).
-        Defaults to 2.
-
-    Returns:
-        List[Any]: The zoomed-in list.
-    """
-    zoomed_in: List[Any] = [
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """Corrected annotations"""
+    zoomed_in: List = [
         item for item in lst
-        for _ in range(factor)
+        for i in range(factor)
     ]
     return zoomed_in
 
 
-array: Tuple[int, int, int] = (12, 72, 91)
+array = (12, 72, 91)
 
-zoom_2x: List[int] = zoom_array(array)
+zoom_2x = zoom_array(array)
 
-zoom_3x: List[int] = zoom_array(array, 3)
+zoom_3x = zoom_array(array, 3)
